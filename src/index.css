@@ -1,0 +1,76 @@
+@font-face{
+	font-family: calculator-font;
+	src: url('./digital.ttf');
+}
+
+.calculator{
+	position: fixed;
+	width: auto;
+	height: auto;
+	align : center;
+	margin: 10% 38% 25% 40%;
+	border: 2px solid;
+	padding: 1% 1% 1% 1%;
+	border-radius: 5px;
+	box-shadow: 5px 5px gray;
+}
+
+.calculator-display{
+	font-family: calculator-font;
+	font-size: 38px;
+	width: auto;
+	height: 40px;
+	text-align: right;
+	background-color: #b8b894;
+	color: #000000;
+	padding : 10px 10px 10px 10px;
+	border-radius: 5px;
+	vertical-align: center;
+}
+
+.calculator-keyboard{
+	
+}
+
+.input-keys{
+	
+}
+
+.calculator-key{
+	width: 40px;
+	height: 30px;
+	vertical-align: center;
+	margin: 2px 2px 2px 2px;
+	border: 0px solid;
+	border-radius: 3px;
+	box-shadow: 1px 1px gray;
+}
+
+.function-keys button{
+	background-color: gray;
+	
+}
+
+
+.key-clear{
+	background-color: #ff3333!important;
+	color: #FFFFFF!important;
+}
+
+.digit-keys{
+	
+}
+
+.operator-keys {
+	background-color: #bfbfbf!important;
+}
+
+.key-equals{
+	
+}
+
+.key-0{
+	width: 84px!important;
+}
+
+
