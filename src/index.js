@@ -18,18 +18,18 @@ class Calculator extends React.Component{
 	}
 	inputDigit(digit){
 			const { displayValue, waitingForOperand } = this.state
+				if(waitingForOperand){
+					this.setState({
+						displayValue: String(digit),
+						waitingForOperand: false
+					})
+				}
+				else if(displayValue.length <8){
+					this.setState({
+						displayValue: displayValue === '0' ? String(digit): displayValue + digit
+					})
+				}
 			
-			if(waitingForOperand){
-				this.setState({
-					displayValue: String(digit),
-					waitingForOperand: false
-				})
-			}
-			else{
-				this.setState({
-					displayValue: displayValue === '0' ? String(digit): displayValue + digit
-				})
-			}
 	}
 	inputDot(){
 		const { displayValue, waitingForOperand } = this.state
@@ -84,10 +84,19 @@ class Calculator extends React.Component{
 			const currentValue = value || 0
 			const computedValue = operations[operator](currentValue, nextValue)
 			
-			this.setState({
-				value: computedValue,
-				displayValue: String(computedValue)
-			})
+			const stringComputedValue = String(computedValue);
+			if(stringComputedValue.length < 8){
+				this.setState({
+					value: computedValue,
+					displayValue: stringComputedValue
+				})
+			}
+			else{
+				this.setState({
+				value: null,
+				displayValue: '0'
+				})
+			}
 		}
 		
 		this.setState({
@@ -101,6 +110,10 @@ class Calculator extends React.Component{
 		
 		return (
 			<div className="calculator">
+			<pre>{
+				//JSON.stringify(this.state, null, 2)
+				}
+			</pre>
 				<div className="calculator-display">
 				{displayValue}
 				</div>
