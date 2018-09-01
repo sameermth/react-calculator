@@ -1,21 +1,21 @@
-Open command in Windows, Terminal in Linux
+## Open command in Windows, Terminal in Linux
 
-Clone Application to your Machine:
-#git clone https://github.com/sameermth/react-calculator.git
+### Clone Application to your Machine:
+#### git clone https://github.com/sameermth/react-calculator.git
 
-switch to the project folder
-#cd react-calculator
+### switch to the project folder
+#### cd react-calculator
 
-Run dependencies installation:
-#npm installation
+### Run dependencies installation:
+####npm installation
 
-If you want to continue further development, start development server
-#npm start
+###If you want to continue further development, start development server
+####npm start
 
-Open in your Browser
-# localhost:3000 
+###Open in your Browser
+#### localhost:3000 
 
-If you want a production build, run
+###If you want a production build, run
 
-# npm run build
-# serve -s build
+#### npm run build
+#### serve -s build
